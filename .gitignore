@@ -1,0 +1,15 @@
+# Ignorar dependencias de Node
+/frontend/node_modules
+/frontend/dist
+
+# Ignorar dependencias y entorno virtual de Python
+/backend/venv
+/backend/__pycache__
+
+# Ignorar archivos de entorno que contienen secretos
+.env
+/backend/.env
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db

@@ -1,0 +1,76 @@
+Chatbot Lector de PDF con IA (FastAPI + React)
+Este es un proyecto de aplicación web full-stack que demuestra la integración de una API de IA (OpenAI) para crear un chatbot capaz de responder preguntas basadas en el contenido de un documento PDF.
+
+Descripción del Proyecto
+(Español)
+Una aplicación de chat inteligente que permite a los usuarios mantener una conversación y obtener respuestas precisas sobre un documento PDF específico. El backend, construido con FastAPI, carga el PDF al iniciar y utiliza su contenido como contexto para las consultas a la API de OpenAI. El frontend, una moderna interfaz de React con un diseño "glassmorphism", se comunica con el backend en tiempo real para mostrar las respuestas de la IA palabra por palabra, ofreciendo una experiencia de usuario fluida e interactiva.
+
+(English)
+An intelligent chat application that allows users to have a conversation and get accurate answers about a specific PDF document. The backend, built with FastAPI, loads the PDF on startup and uses its content as context for queries to the OpenAI API. The frontend, a modern React interface with a "glassmorphism" design, communicates with the backend in real-time to display the AI's responses word-by-word, providing a fluid and interactive user experience.
+
+✨ Características Principales (Features)
+Backend Robusto: API construida con FastAPI (Python).
+
+Procesamiento de Contexto: Carga y extrae texto de un documento PDF al iniciar.
+
+Integración con IA: Utiliza la API de OpenAI (GPT-4) para generar respuestas contextuales.
+
+Frontend Interactivo: Interfaz de usuario creada con React y Vite.
+
+Diseño Moderno: Estilizado con Tailwind CSS para un look "glassmorphism" limpio y responsivo.
+
+Streaming en Tiempo Real: Las respuestas del bot aparecen palabra por palabra gracias a Server-Sent Events (SSE).
+
+Manejo de Estado: Lógica de la interfaz manejada eficientemente con hooks de React.
+
+Botón de Reinicio: Permite limpiar el historial de la conversación.
+
+🛠️ Tecnologías Utilizadas (Tech Stack)
+Backend: Python, FastAPI, Uvicorn, PyPDF2, python-dotenv, OpenAI Python SDK.
+
+Frontend: React, Vite, JavaScript, Tailwind CSS.
+
+IA: OpenAI API (GPT-4).
+
+🚀 Instalación y Puesta en Marcha (Setup and Run)
+Sigue estos pasos para ejecutar el proyecto en tu máquina local.
+
+Variables de Entorno
+En la carpeta backend, crea un archivo llamado .env.
+
+Añade tu clave de API de OpenAI al archivo de la siguiente manera:
+
+OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+Backend
+# 1. Navega a la carpeta del backend
+cd backend
+
+# 2. Crea y activa un entorno virtual
+python -m venv venv
+# En Windows:
+.\venv\Scripts\activate
+# En macOS/Linux:
+# source venv/bin/activate
+
+# 3. Instala las dependencias
+pip install -r requirements.txt
+
+# 4. Coloca tu documento PDF en la carpeta /data
+
+# 5. Inicia el servidor de la API
+uvicorn main:app --reload
+
+El backend estará corriendo en http://localhost:8000.
+
+Frontend
+# 1. Abre una nueva terminal y navega a la carpeta del frontend
+cd frontend
+
+# 2. Instala las dependencias de Node.js
+npm install
+
+# 3. Inicia el servidor de desarrollo
+npm run dev
+nd estará disponible en http://localhost:5173 (o la URL que indique la terminal).
+El fronte

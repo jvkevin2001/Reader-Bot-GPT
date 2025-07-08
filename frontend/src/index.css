@@ -1,0 +1,71 @@
+/* frontend/src/index.css */
+
+/* 1. Importa las directivas base de Tailwind CSS. Esto es obligatorio. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Estilos personalizados que no se pueden hacer fácilmente con clases de Tailwind. */
+body {
+  /* Puedes cambiar la fuente si lo deseas. 'Poppins' es la del ejemplo. */
+  font-family: 'Poppins', sans-serif; 
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  overflow: hidden; /* Evita que el fondo se mueva con el scroll del chat */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Esferas decorativas de fondo */
+body::before, body::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(3rem);
+  z-index: -1;
+}
+
+body::before {
+  top: -10%;
+  left: -10%;
+  width: 18rem;
+  height: 18rem;
+  background-color: rgba(192, 132, 252, 0.5); /* Corresponde a purple-400 opacity-50 */
+}
+
+body::after {
+  bottom: -15%;
+  right: -15%;
+  width: 24rem;
+  height: 24rem;
+  background-color: rgba(147, 197, 253, 0.4); /* Corresponde a blue-300 opacity-40 */
+}
+
+/* Clases personalizadas para el efecto de cristal */
+.glass-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bot-message {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.user-message {
+  background: rgba(102, 126, 234, 0.5);
+}
+
+/* Estilos para la barra de scroll */
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+.chat-messages::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
